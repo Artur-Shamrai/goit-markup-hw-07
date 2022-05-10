@@ -446,7 +446,7 @@ margin-top: 50px;
 
 
   /* Clients Section */
-.clients .title {
+.clients__title {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1.17;
@@ -454,18 +454,18 @@ margin-top: 50px;
 }
 
 
-  .clients .list {
+  .clients__list {
   display: flex;
   cursor: pointer;
   margin-top: 50px;
 }
 
-.clients .links:not(:last-child) {
+.clients__links:not(:last-child) {
   margin-right: 30px;
 }
 
 
-.links-current {
+.clients__current {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -478,14 +478,14 @@ margin-top: 50px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
- .clients .links-current:hover,
- .clients .links-current:focus {
+ .clients__current:hover,
+ .clients__current:focus {
   border: 1px solid  var(--akcent);
   border-radius: 4px;
   color: var(--akcent);
 }
 
-.clients .current-icon{
+.clients__icon{
   width: 106px;
   height: 60px;
   fill: currentColor;
@@ -522,7 +522,11 @@ text-decoration: none;
 }
 /* Footer links */
   
-.footer .map {
+.footer__list {
+  margin-top: 20px;
+}
+
+.footer__map {
   color: var(--text-color-white);
   font-style: normal;
   font-size: 14px;
@@ -531,7 +535,7 @@ text-decoration: none;
   text-decoration: none;
   }
  
-.footer .link {
+.footer__link {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -543,7 +547,8 @@ text-decoration: none;
 .footer li:not(:last-child) {
   margin-bottom: 9px;
 }
-address { margin-top: 20px ;}
+
+        /* Footer-social */
 
 .footer-social{
   margin-left: 70px;
@@ -558,11 +563,11 @@ address { margin-top: 20px ;}
   margin-bottom: 20px;
 }
 
-.footer-social-list {
+.footer-social__list {
   display: flex;
 }
 
-.footer-social-item {
+.footer-social__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -574,26 +579,27 @@ address { margin-top: 20px ;}
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-icon {
+.footer-social__icon {
   width: 20px;
   height: 20px;
 }
 
-.footer-social-item:hover,
-.footer-social-item:focus {
+.footer-social__item:hover,
+.footer-social__item:focus {
   background-color: var(--akcent);
 }
 
-.footer-social-link:not(:last-child) {
+.footer-social__link:not(:last-child) {
   margin-right: 10px;
 }
 
+        /* End Footer-social */
 
-/* Footer input */
-.footer-input-form {
+        /* Footer input */
+
+.footer-form__input {
   margin-left: auto;
 }
-
 
 .footer-form {
   display: block;
@@ -604,7 +610,7 @@ address { margin-top: 20px ;}
   text-transform: uppercase;
 }
 
-.footer-mail-form {
+.footer-form__mail {
   background-color: var(--background-footer-color);
   color: var(--text-color-white);
   width: 358px;
@@ -616,12 +622,14 @@ address { margin-top: 20px ;}
   outline: none;
 }
 
+
+
 ::placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6)
 }
 
-.footer-input-button{
+.footer-input__button{
   position: relative;
   background-color: var(--akcent);
   color: var(--text-color-white);
@@ -633,10 +641,11 @@ address { margin-top: 20px ;}
   border: none;
   padding: 10px 62px 10px 29px;
   margin-left: 12px;
+  cursor: pointer;
 }
 
 
-.button-input-icon {
+.button-input__icon {
   position: absolute;
  fill: var(--text-color-white);
  top: 13px;
@@ -793,8 +802,10 @@ overflow: hidden;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
+
+/* Modal */
+
 .modal{
   position: absolute;
   top: 50%;
@@ -812,7 +823,7 @@ overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
-.modal-desk {
+.modal__desk {
   font-size: 20px;
   font-weight: var(--font-weight-bold);
   line-height: 1.15;
@@ -820,13 +831,13 @@ overflow: hidden;
   text-align: center;
 }
 
-
+/* Modal-form */
 
 .modal-form {
   position: relative;
 }
 
-.modal-form-label{
+.modal-form__label{
   display: block;
   color: var(--secondary-text-color);
   font-size: 12px;
@@ -834,7 +845,7 @@ overflow: hidden;
   margin-bottom: 4px;
 }
 
-.modal-form-input{
+.modal-form__input{
   display: block;
   width: 448px;
   height: 40px;
@@ -846,17 +857,17 @@ cursor: pointer;
 }
 
 
-.modal-form-input:focus {
+.modal-form__input:focus {
  border: 1px solid var(--akcent);
  outline: none;
  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.modal-form-input:focus + .modal-form-icon {
+.modal-form__input:focus + .modal-form__icon {
   color: var(--akcent);
 }
-.modal-form-icon {
+.modal-form__icon {
   color: var(--primary-text-color);
 }
 
@@ -869,14 +880,14 @@ cursor: pointer;
   fill: currentColor;
 }
 
-.modal-form-icon:focus {
+.modal-form__icon:focus {
   background-color: var(--akcent);
 color: var(--text-color-white);
 }
 
 
 
-.modal-form-comments {
+.modal-form__comments {
   width: 448px;
   height: 120px;
   resize: none;
@@ -886,25 +897,25 @@ color: var(--text-color-white);
   margin-bottom: 20px;
 }
 
-.modal-form-comments:focus {
+.modal-form__comments:focus {
   border: 1px solid var(--akcent);
  outline: none;
  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-button {
+.modal-form__button {
   display: block;
-margin-inline: auto;
+  margin-inline: auto;
   width: 200px;
   height: 50px;
   background-color: var(--akcent);
   color: var(--text-color-white);
   border-radius: 4px;
-border: none;
+ border: none;
 }
 
 
-.modal-button-text{
+.modal-button__text{
 font-size: 16px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.06em;
@@ -912,7 +923,7 @@ font-size: 16px;
 }
 
 
-.modal-checkbox-icon {
+.modal-checkbox__icon {
   appearance: none;
 }
 
@@ -925,7 +936,7 @@ font-size: 16px;
  
 }
 
-.checkbox-icon {
+.checkbox__icon {
   position: absolute;
   left: 3px;
   width: 16px;
@@ -935,7 +946,7 @@ font-size: 16px;
  border-radius: 3px;
 }
 
-.modal-checkbox-icon:checked + .checkbox-icon {
+.modal-checkbox__icon:checked + .checkbox__icon {
   background-color: #188CE8;
   border-radius: 3px;
   border-color: var(--akcent);
@@ -949,7 +960,7 @@ background-size: contain;
 
 
 
-.modal-form-link {
+.modal-form__link {
   color: var(--akcent);
 }
 
@@ -962,7 +973,7 @@ background-size: contain;
   transform: translate(-50%,-50%) translate(20%,30%);
 }
 
-.close-icon{
+.button-close__icon{
   width: 18px;
   height: 18px;                               
 }
@@ -982,7 +993,7 @@ background-size: contain;
 }
   
 
-.close-icon:hover {
+.button-close__icon:hover {
   fill: var(--akcent);
 }
 
